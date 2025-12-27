@@ -1,0 +1,214 @@
+_wandb:
+    value:
+        cli_version: 0.22.2
+        e:
+            epfoas8mamd52lmpjl1rglwld1uaylsa:
+                args:
+                    - --dataset.repo_id=bluephysi01/so101_test34
+                    - --policy.type=act
+                    - --job_name=act_so101_test34-1
+                    - --policy.device=cuda
+                    - --policy.push_to_hub=true
+                    - --policy.repo_id=bluephysi01/act_so101_test34-1
+                    - --batch_size=8
+                    - --num_workers=8
+                    - --steps=100000
+                    - --wandb.enable=true
+                    - --policy.chunk_size=30
+                    - --policy.n_action_steps=30
+                    - --wandb.enable=true
+                cpu_count: 16
+                cpu_count_logical: 24
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "982820896768"
+                        used: "378390663168"
+                executable: /home/bluephysi01/lerobot/.venv/bin/python
+                git:
+                    commit: b74e2a61133b695eca35997334f22389321ed6db
+                    remote: https://github.com/huggingface/lerobot.git
+                gpu: NVIDIA GeForce RTX 5050 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Blackwell
+                      cudaCores: 2560
+                      memoryTotal: "8546942976"
+                      name: NVIDIA GeForce RTX 5050 Laptop GPU
+                      uuid: GPU-ad58112f-75ab-dbfc-5641-55a627c52ebe
+                host: bluephysi01-LOQ-15IRX10
+                memory:
+                    total: "33344606208"
+                os: Linux-6.8.0-88-generic-x86_64-with-glibc2.35
+                program: -m lerobot.scripts.lerobot_train
+                python: CPython 3.10.12
+                root: outputs/train/2025-12-19/06-09-33_act_so101_test34-1
+                startedAt: "2025-12-18T21:09:34.425878Z"
+                writerId: epfoas8mamd52lmpjl1rglwld1uaylsa
+        m: []
+        python_version: 3.10.12
+        t:
+            "1":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+                - 71
+            "2":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+                - 71
+            "3":
+                - 13
+                - 15
+                - 16
+                - 61
+            "4": 3.10.12
+            "5": 0.22.2
+            "6": 4.53.3
+            "10":
+                - 21
+            "12": 0.22.2
+            "13": linux-x86_64
+batch_size:
+    value: 8
+dataset:
+    value:
+        episodes: null
+        image_transforms:
+            enable: false
+            max_num_transforms: 3
+            random_order: false
+            tfs:
+                brightness:
+                    kwargs:
+                        brightness:
+                            - 0.8
+                            - 1.2
+                    type: ColorJitter
+                    weight: 1
+                contrast:
+                    kwargs:
+                        contrast:
+                            - 0.8
+                            - 1.2
+                    type: ColorJitter
+                    weight: 1
+                hue:
+                    kwargs:
+                        hue:
+                            - -0.05
+                            - 0.05
+                    type: ColorJitter
+                    weight: 1
+                saturation:
+                    kwargs:
+                        saturation:
+                            - 0.5
+                            - 1.5
+                    type: ColorJitter
+                    weight: 1
+                sharpness:
+                    kwargs:
+                        sharpness:
+                            - 0.5
+                            - 1.5
+                    type: SharpnessJitter
+                    weight: 1
+        repo_id: bluephysi01/so101_test34
+        revision: null
+        root: null
+        streaming: false
+        use_imagenet_stats: true
+        video_backend: pyav
+env:
+    value: null
+eval:
+    value:
+        batch_size: 50
+        n_episodes: 50
+        use_async_envs: false
+eval_freq:
+    value: 20000
+job_name:
+    value: act_so101_test34-1
+log_freq:
+    value: 200
+num_workers:
+    value: 8
+optimizer:
+    value:
+        betas:
+            - 0.9
+            - 0.999
+        eps: 1e-08
+        grad_clip_norm: 10
+        lr: 1e-05
+        type: adamw
+        weight_decay: 0.0001
+output_dir:
+    value: outputs/train/2025-12-19/06-09-33_act_so101_test34-1
+policy:
+    value:
+        chunk_size: 30
+        device: cuda
+        dim_feedforward: 3200
+        dim_model: 512
+        dropout: 0.1
+        feedforward_activation: relu
+        kl_weight: 10
+        latent_dim: 32
+        license: null
+        n_action_steps: 30
+        n_decoder_layers: 1
+        n_encoder_layers: 4
+        n_heads: 8
+        n_obs_steps: 1
+        n_vae_encoder_layers: 4
+        normalization_mapping:
+            ACTION: MEAN_STD
+            STATE: MEAN_STD
+            VISUAL: MEAN_STD
+        optimizer_lr: 1e-05
+        optimizer_lr_backbone: 1e-05
+        optimizer_weight_decay: 0.0001
+        pre_norm: false
+        pretrained_backbone_weights: ResNet18_Weights.IMAGENET1K_V1
+        pretrained_path: null
+        private: null
+        push_to_hub: true
+        replace_final_stride_with_dilation: false
+        repo_id: bluephysi01/act_so101_test34-1
+        tags: null
+        temporal_ensemble_coeff: null
+        type: act
+        use_amp: false
+        use_vae: true
+        vision_backbone: resnet18
+resume:
+    value: false
+save_checkpoint:
+    value: true
+save_freq:
+    value: 20000
+scheduler:
+    value: null
+seed:
+    value: 1000
+steps:
+    value: 100000
+use_policy_training_preset:
+    value: true
+wandb:
+    value:
+        disable_artifact: false
+        enable: true
+        entity: null
+        mode: null
+        notes: null
+        project: lerobot
+        run_id: null
